@@ -8,13 +8,13 @@ type SkillPropsType = {
 }
 
 export const Skill = (props: SkillPropsType) => {
-    return(
-                   <StyledSkill>
-                <Icon iconId={props.iconId} />
-                <SkillTitle>{props.title}</SkillTitle>
-                <SkillText>{props.description}</SkillText>
-            </StyledSkill> 
-   );
+    return (
+        <StyledSkill>
+            <Icon iconId={props.iconId} />
+            <SkillTitle>{props.title}</SkillTitle>
+            <SkillText>{props.description}</SkillText>
+        </StyledSkill>
+    );
 }
 
 const StyledSkill = styled.div`
