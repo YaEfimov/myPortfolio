@@ -27,8 +27,8 @@ const StyledMain = styled.div`
 `;
 
 const StyledPhoto = styled.img`
-  width: 1920px;
-  height: 993px;
+  width: 350px;
+  height: 430px;
   object-fit: cover;
 `;
 
