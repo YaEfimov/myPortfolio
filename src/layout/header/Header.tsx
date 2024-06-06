@@ -20,7 +20,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: black;
+  background-color: #45bb8e;
   padding: 20px 0;
   position: fixed;
   top: 0;

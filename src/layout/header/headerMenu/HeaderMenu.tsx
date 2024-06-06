@@ -34,8 +34,9 @@ const StyledHeaderMenu = styled.nav`
 `
 
 
+
 const Link = styled.a`
-    font-family:'Courier New', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     font-weight: 400;
     font-size: 30px;
     text-align: center;
@@ -50,51 +51,112 @@ const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     /* outline: 1px solid red; */
-    color: pink
+    color: pink; // нужно из темы
 
     & + & {
-        top: 50%
-        span {
+        top: 50%;
+        span{
             display: inline-block;
             transform: translateY(-50%);
         }
     }
 `
 
-const ListItem = styled.li` 
+const ListItem = styled.li`
     position: relative;
 
-    &::before{
+    &::before {
         content: "";
-        display: inline-block;
+        display: block;
         height: 3px;
-        background-color: pink;
-       
+        background-color: purple;
+        
         position: absolute;
         top: 50%;
         left: -10px;
         right: -10px;
         z-index: 1;
-        
+
         transform: scale(0);
     }
 
-    &:hover{
+    &:hover {
 
         &::before{
             transform: scale(1);
         }
 
-        ${Mask}{
+        ${Mask} {
             transform: skewX(12deg) translateX(5px);
-            color: ${Theme.colors.fontTitle}
-            
+            color: white;
             & + ${Mask} {
-            transform: skewX(12deg) translateX(-5px);
+                transform: skewX(12deg) translateX(-5px);
             }
         }
-
-
     }
-
 `
+
+// const Link = styled.a`
+//     font-family:'Courier New', sans-serif;
+//     font-weight: 400;
+//     font-size: 30px;
+//     text-align: center;
+//     color: transparent;
+// `
+
+// const Mask = styled.span`
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: inline-block;
+//     height: 50%;
+//     overflow-y: hidden;
+//     /* outline: 1px solid red; */
+//     color: pink
+
+//     & + & {
+//         top: 50%
+//         span {
+//             display: inline-block;
+//             transform: translateY(-50%);
+//         }
+//     }
+// `
+
+// const ListItem = styled.li` 
+//     position: relative;
+
+//     &::before{
+//         content: "";
+//         display: inline-block;
+//         height: 3px;
+//         background-color: pink;
+       
+//         position: absolute;
+//         top: 50%;
+//         left: -10px;
+//         right: -10px;
+//         z-index: 1;
+        
+//         transform: scale(0);
+//     }
+
+//     &:hover{
+
+//         &::before{
+//             transform: scale(1);
+//         }
+
+//         ${Mask}{
+//             transform: skewX(12deg) translateX(5px);
+//             color: ${Theme.colors.fontTitle}
+            
+//             & + ${Mask} {
+//             transform: skewX(12deg) translateX(-5px);
+//             }
+//         }
+
+
+//     }
+
+// `
