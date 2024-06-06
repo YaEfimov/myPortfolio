@@ -19,6 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: ${Theme.colors.fontTitle};
+  line-height: 1.2;
 }
 
 a{
