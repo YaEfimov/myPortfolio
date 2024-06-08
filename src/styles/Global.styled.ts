@@ -40,11 +40,11 @@ section {
 }
 
 section:nth-of-type(odd){ /* для четных секций */
-    background-color: ${Theme.colors.primaryBg};
+    background-color: orange;//{$_Theme.colors.primaryBg};
 }
 
 section:nth-of-type(even){ /* для нечетных секций */
-    background-color: ${Theme.colors.primaryBg};
+    background-color: green;/*{$_Theme.colors.primaryBg};*/
 }
 
 `;
