@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 
 type SkillPropsType = {
     iconId: string;
@@ -10,23 +11,56 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} />
-            <SkillTitle>{props.title}</SkillTitle>
-            <SkillText>{props.description}</SkillText>
+            <FlexWrapper direction="column" align="center">
+                <IconWrapper>
+                    <Icon iconId={props.iconId} />
+                </IconWrapper>
+                <SkillTitle>{props.title}</SkillTitle>
+                <SkillText>{props.description}</SkillText>
+            </FlexWrapper>
         </StyledSkill>
     );
 }
 
 const StyledSkill = styled.div`
-    width: 33%;
-    background-color: white;
-    margin: 10px;
+    width: 380px;
+    padding: 62px 20px 40px;
+`
+
+const IconWrapper = styled.div`
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 0, 43, 0.1);
+        transform: rotate(45deg) translate(-50%, -50%);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-origin: top left;
+    }
 `
 
 const SkillTitle = styled.h3`
-
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 70px 0 15px;
 `
 
 const SkillText = styled.p`
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 
+
+    text-align: center;
+    line-height: 1.4;
 `
+
